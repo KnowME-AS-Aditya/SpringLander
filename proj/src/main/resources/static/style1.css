@@ -1,0 +1,99 @@
+* {
+          margin: 2px;
+          padding: 2px;
+          box-sizing: border-box;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background-image: url(https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
+          background-size: cover;
+          background-position: center;
+        }
+
+        main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+
+        h1 {
+          font-size: 2rem;
+          color: white;
+          text-align: center;
+        }
+
+        section {
+          max-width: 500px;
+          background-color: transparent;
+          border: 2px solid rgba(255, 255, 255, 0.5);
+          border-radius: 20px;
+          backdrop-filter: blur(50px);
+          padding: 2rem 3rem;
+          display: flex;
+          justify-content: center;
+          transition: all 0.5s ease-in-out;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .inputbox {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: white;
+          font-size: 1.2rem;
+        }
+
+        .inputbox input {
+          flex: 1;
+          height: 40px;
+          border-radius: 8px;
+          padding: 0 10px;
+          font-size: 1rem;
+          border: none;
+          outline: none;
+
+        }
+
+        .txt {
+          color: white;
+          font-size: 1.7rem;
+          text-align: center;
+        }
+
+        #logd {
+          width: 80%;
+          height: 40px;
+          border-radius: 40px;
+          border: none;
+          cursor: pointer;
+          font-size: 1rem;
+          font-weight: 600;
+          align-self: center;
+          transition: all 0.3s ease;
+        }
+
+        #logd:hover {
+          background-color: rgba(255, 255, 255, 0.5);
+          color: black;
+        }
+
+        a {
+          color: #66ccff;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }

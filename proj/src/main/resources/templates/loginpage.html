@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login | SpringLander</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" th:href="@{/style1.css}" />
+    <style>
+        .error-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px solid #f5c6cb;
+    font-weight: bold;
+    }
+
+    </style>
+</head>
+<body>
+<main>
+    <h1>Login : <b>SpringLander</b></h1>
+    <section>
+        <form action="/login" method="post">
+            <div class="inputbox">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" name="username" placeholder="Username" required />
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" name="password" placeholder="Password" required />
+            </div>
+            <button type="submit" id="logd"><big>Login!</big></button>
+            <div>
+                <p class="txt">
+                    Don’t have an account?<br>
+                    <a th:href="@{/signup}"><ion-icon name="log-in-outline"></ion-icon> Sign Up</a>
+                </p>
+            </div>
+        </form>
+    </section>
+</main>
+<div th:if="${error}" class="error-box">
+    <p th:text="${error}"></p>
+</div>
+
+</body>
+<footer style="text-align: right; position: absolute; bottom: 10px; width: 100%;">
+    <p style="color: white;"><a href="https://github.com/KnowME-AS-Aditya">Aditya@GitHub.</a></p>
+</footer>
+
+</html>

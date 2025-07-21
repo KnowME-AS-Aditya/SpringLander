@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>RegisteredUsers</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            color: white;
+            font-family: 'Exo 2', 'TikTok Sans', sans-serif;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid white;
+        }
+
+        th {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            background-color: #fff;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background-color: #ddd;
+        }
+        </style>
+</head>
+<body>
+<h1><ion-icon name="people-outline"></ion-icon>Registered Users</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+    </tbody>
+</table>
+<button class="back-btn" onclick="location.href='/welcome'">
+    <ion-icon name="home-outline"></ion-icon> Back to Home</button>
+</body>
+</html>

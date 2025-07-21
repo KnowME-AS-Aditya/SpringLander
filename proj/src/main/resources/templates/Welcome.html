@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - SpringLander</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1 {
+    color: white;
+    font-family: 'Exo 2', 'TikTok Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+header {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+header button {
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+header button:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem 3rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.inputbox {
+    margin: 10px 0;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.txt {
+    color: white;
+}
+
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <button onclick="location.href='/'"><ion-icon name="home-outline"></ion-icon> Home</button>
+    <button onclick="location.href='/userbase'"><ion-icon name="people-outline"></ion-icon> Regd User Base</button>
+    <button onclick="location.href='/logout'"><ion-icon name="log-out-outline"></ion-icon> Logout</button>
+  </header>
+
+  <main>
+    <h1><b>Welcome to SpringLander!</b></h1>
+    <section>
+      <div class="inputbox">
+        <ion-icon name="person-outline"></ion-icon>
+        <span class="txt">Hello, <b th:text="${username}">Username</b>!</span>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="id-card-outline"></ion-icon>
+        <span class="txt">Your ID: <b th:text="${id}">ID</b></span>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <span class="txt">Date: <b th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy')}">Date</b></span>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="time-outline"></ion-icon>
+        <span class="txt">Time: <b th:text="${#dates.format(#dates.createNow(), 'HH:mm:ss')}">Time</b></span>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<footer style="text-align: right; position: absolute; bottom: 20px; width: 100%;">
+  <p style="color: white;"><a href="https://github.com/KnowME-AS-Aditya">Aditya@GitHub.</a></p>
+</footer>
+</body>
+
+</html>

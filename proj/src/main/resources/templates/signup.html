@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpringLander</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+
+
+
+</head>
+<body>
+<title><b>SignUp</b></title>
+<main>
+<h1 style="font-family: 'Exo 2', 'TikTok Sans', sans-serif;"><b>SpringLander</b></h1><br>
+<section>
+    <form action="/signup" method="post">
+        <div class="inputbox">
+            <ion-icon name="person-outline"></ion-icon>
+            <input type="text" name="username" required>
+            <label class="txt">Name</label>
+        </div>
+        <div class="inputbox">
+            <ion-icon name="lock-closed-outline" ></ion-icon>
+            <input type="text" name="password" required>
+            <label class="txt">Password</label>
+        </div>
+        <div class="inputbox">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="text" name="email" required>
+            <label class="txt">Email</label><br>
+        </div>
+        <button style="align-items:center;" type="submit" id="regd"><big>Register!</big></button>
+        <div>
+            <p class="txt">
+                Already have an account?<br>
+                <a th:href="@{/login}"><ion-icon name="log-in"></ion-icon> Log In</a>
+            </p>
+        </div>
+    </form>
+</section>
+</main>
+<footer style="text-align: right; position: absolute; bottom: 20px; width: 100%;">
+    <p style="color: white;"><a href="https://github.com/KnowME-AS-Aditya">Aditya@GitHub.</a></p>
+</footer>
+</body>
+</html>
