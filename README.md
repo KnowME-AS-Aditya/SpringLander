@@ -1,4 +1,3 @@
-Here’s a **professional yet engaging README** for your [`SpringLander`](https://github.com/KnowME-AS-Aditya/SpringLander/tree/main/proj) project. It reflects clean backend logic, a modern login/signup flow, and a clear scope for future features (like admin roles, deletion, userbase dashboard, etc.).
 
 ---
 
